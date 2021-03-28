@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use Overtrue\LaravelFollow\Traits\CanLike;
+
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -12,7 +12,7 @@ use Laravelista\Comments\Commenter;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable, commenter, CanLike;
+    use HasFactory, Notifiable, commenter;
 
     /**
      * The attributes that are mass assignable.

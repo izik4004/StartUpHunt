@@ -12,8 +12,8 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
-        "laravelista/comments": "^4.5",
-        "overtrue/laravel-follow": "^2.2"
+        "laravelista/comments": "^4.5"
+       
     },
     "require-dev": {
         "facade/ignition": "^2.5",
