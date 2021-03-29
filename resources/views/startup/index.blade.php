@@ -20,7 +20,7 @@
            
                @if (session()->has('message')) 
                     <div class="w-full m-auto mt-18 pl-2">
-                        <p class="w-1/6 mb-4 text-gray-50 bg-green-500 rounded-2xl py-4">
+                        <p class="w-1/2 mb-4 text-gray-50 bg-green-500 rounded-sm py-4">
                         {{ session()->get('message') }}
                         </p>
                     </div>
@@ -58,39 +58,36 @@
                             {{ $post->category }}
                             
                         </div>
-                        <div class="flex items-start my-2 md:m-0">
-                            
-                            
-                        </div>
+                        @if (isset(Auth::user()->id) && Auth::user()->id ==
+                        $post->user_id)
+                            <span class="float-right">
+                                <a href="/startup/{{ $post->slug }}/edit"
+                                    class="text-gray-700 ml-8 italic hover:text-gray-900
+                                    pb-1 border-b-2"
+                                    >Edit
+                                
+                                </a>
+                            </span>
+
+                            <span class="float-right">
+                                <form action="/startup/{{ $post->slug }}" method="post">
+                                @csrf
+                                @method('delete')
+
+                                <button
+                                    class="text-red-500 pr-3" type="submit">
+                                    Delete
+                                </button>
+                                </form>
+                            </span>
+                        @endif
                     </div>
                 </div>
 
                                     
                     
 
-                            @if (isset(Auth::user()->id) && Auth::user()->id ==
-                            $post->user_id)
-                                <span class="float-right">
-                                    <a href="/startup/{{ $post->slug }}/edit"
-                                        class="text-gray-700 ml-8 italic hover:text-gray-900
-                                        pb-1 border-b-2"
-                                        >Edit
-                                    
-                                    </a>
-                                </span>
-
-                                <span class="float-right">
-                                    <form action="/startup/{{ $post->slug }}" method="post">
-                                    @csrf
-                                    @method('delete')
-
-                                    <button
-                                        class="text-red-500 pr-3" type="submit">
-                                        Delete
-                                    </button>
-                                    </form>
-                                </span>
-                            @endif
+                           
                      
                         
             @endforeach
