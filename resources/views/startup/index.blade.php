@@ -20,13 +20,13 @@
            
                @if (session()->has('message')) 
                     <div class="w-full m-auto mt-18 pl-2">
-                        <p class="w-1/2 mb-4 text-gray-50 pl-4 bg-green-200 rounded-lg py-4">
+                        <p class="w-1/2 mb-4 text-gray-50 pl-4 mt-4 bg-green-500 rounded-lg py-4">
                         {{ session()->get('message') }}
                         </p>
                     </div>
                @endif
            
-            <div class="mt-6 grid grid-cols-2  md:grid-cols-2 gap-4">
+            <div class="mt-6 grid grid-cols-2  md:grid-cols-2 gap-6 mb-6">
                 @foreach ($posts as $post)
                   
                     
