@@ -20,7 +20,7 @@
            
                @if (session()->has('message')) 
                     <div class="w-full m-auto mt-18 pl-2">
-                        <p class="w-1/2 mb-4 text-gray-50 bg-green-500 rounded-sm py-4">
+                        <p class="w-1/2 mb-4 text-gray-50 pl-4 bg-green-200 rounded-lg py-4">
                         {{ session()->get('message') }}
                         </p>
                     </div>
@@ -58,6 +58,7 @@
                             {{ $post->category }}
                             
                         </div>
+                        <div class="flex flex-row">
                         @if (isset(Auth::user()->id) && Auth::user()->id ==
                         $post->user_id)
                             <span class="float-right">
@@ -69,7 +70,7 @@
                                 </a>
                             </span>
 
-                            <span class="float-right">
+                            <span class="ml-2">
                                 <form action="/startup/{{ $post->slug }}" method="post">
                                 @csrf
                                 @method('delete')
@@ -81,6 +82,7 @@
                                 </form>
                             </span>
                         @endif
+                        </div>
                     </div>
                 </div>
 
