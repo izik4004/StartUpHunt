@@ -19,7 +19,8 @@ Route::get('/', [PagesController::class, 'index',]);
 
 Route::resource('/startup', PostsController::class);
 
+Route::get('/index', [\App\Http\Controllers\HomeController::class, 'index'])->name('index');
+
 Auth::routes();
 
-Route::get('/index', [\App\Http\Controllers\HomeController::class, 'index'])->name('index');
 Route::post('follow', 'HomeController@follwUserRequest')->name('follow');

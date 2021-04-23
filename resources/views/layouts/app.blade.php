@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'StartUp|Hunt') }}</title>
+    <title>{{ ('StartUp|Hunt') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -18,25 +18,28 @@
 </head>
 <body class="bg-gray-100 h-screen antialiased leading-none font-sans">
     <div id="app">
-        <header class="bg-white border-b border-gray-100 py-4">
-            <div class="container mx-auto flex justify-between items-center px-6">
+        <header class="bg-white border-b border-gray-100 py-3">
+            <div class="max-w-6xl mx-auto flex justify-between items-center">
                 <div>
                     <a href="{{ url('/') }}" class="text-2xl font-bold text-indigo-600 no-underline">
-                        {{ config('app.name', 'StartUp|Hunt') }}
+                        {{ ('StartUp|Hunt') }}
                     </a>
                 </div>
+                <ul class="flex items-center hidden space-x-8 lg:flex">
+                <li><a href="{{ route('startup.index') }}" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-indigo-400 ">Startup</a></li>
+                <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-indigo-400 ">Features</a></li>
+                <li><a href="/" aria-label="About us" title="About us" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-indigo-400 ">About us</a></li>
+                </ul>
                 <nav class="space-x-4 text-teal-800 text-sm sm:text-base justify-start">
-                    
-                    <a class="no-underline hover:underline" href="{{ route('startup.index') }}">Startups</a>
-                    <a href="{{ route('startup.create') }}"><button class="px-4 py-2 border border-blue-500">Post</button></a>
+                                       
                     @guest
-                        <a class="no-underline hover:underline" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <a class="border px-3 py-2 text-sm font-semibold rounded-md bg-white text-indigo-500 no-underline hover:bg-gray-100" href="{{ route('login') }}">{{ __('Log in') }}</a>
                         @if (Route::has('register'))
-                            <a class="no-underline hover:underline" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="border px-3 py-2 text-sm font-semibold rounded-md bg-indigo-500 text-white no-underline hover:bg-indigo-700" href="{{ route('register') }}">{{ __('Sign Up') }}</a>
                         @endif
                     @else
                         <span>{{ Auth::user()->name }}</span>
-
+                        <a href="{{ route('startup.create') }}"><button class="px-4 py-2 border border-indigo-500">Post</button></a>
                         <a href="{{ route('logout') }}"
                            class="no-underline hover:underline"
                            onclick="event.preventDefault();
@@ -49,12 +52,12 @@
             </div>
         </header>
 
-        <div>
+        <div class="max-w-6xl mx-auto">
         @yield('content')
         </div>
 
         <div>
-            @include('layouts.footer')
+            
         </div>
     </div>
 </body>
