@@ -11,8 +11,8 @@
         border-radius: 5%;
         text-align: center;
         color: red;      
-        font-size: 14px;      
-        width: 100px;
+        font-size: 12px;      
+        width: 70px;
         height: 30px;    
         padding: 5px;
         border: 1px solid red;

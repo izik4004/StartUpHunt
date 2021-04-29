@@ -49,7 +49,7 @@
                 <option value="Fintech">Fintech</option>
                 <option value="Ecommerce">Ecommerce</option>
                 <option value="Health">Health</option>
-                <option value="Agriculture">Agriculture</option>
+                <option value="Agriculture">Agric</option>
                 <option value="Others">Others</option>
             </select>
          </div>
