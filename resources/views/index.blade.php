@@ -4,13 +4,13 @@
     <div class="">
             <div class="bg-gray-100  flex flex-row ">
                 <div class="lg:2/6 xl:w-2/4  text-left mb-4  py-12">
-                  <div class="text-6xl font-semibold text-gray-900 leading-none text-center">Looking for <span class="text-indigo-500">startups</span> to invest in?</div>
+                  <div class="text-6xl font-semibold text-gray-900 leading-none text-center mt-4">Looking for <span class="text-indigo-500">startups</span> to invest in?</div>
                   <div class="mt-8 text-xl font-light text-true-gray-500 antialiased">Our goal is to create a seamless connection between StartUps and Investors, by showcasing your startup ideas to a large audience of investors</div>
                    <!---- <p class="mt-4 text-4xl font-semibold text-true-gray-500 antialiased">Do you have a start-up to showcase?</p> ----->
                 <!--   <a href="{{ route('startup.index') }}"> <button class="mt-4  px-3 py-2 rounded-lg tracking-wide border border-indigo-500 bg-indigo-500 hover:bg-white hover:text-indigo-700 text-white text-base font-semibold outline-none focus:outline-none hover:shadow-sm">
                    View Startups
                   </button></a>--->
-                  <button class="mt-4 ml-8 px-3 py-2 rounded-lg tracking-wide bg-white border border-indigo-700 hover:bg-indigo-700 hover:text-white text-indigo-700 text-lg font-bold outline-none focus:outline-none hover:shadow-sm">
+                  <button class="mt-4 px-3 py-2 rounded-lg tracking-wide bg-white border border-indigo-700 hover:bg-indigo-700 hover:text-white text-indigo-700 text-lg font-bold outline-none focus:outline-none hover:shadow-sm">
                       Contact us
                   </button>
                 </div>
